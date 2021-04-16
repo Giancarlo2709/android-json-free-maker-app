@@ -7,5 +7,6 @@
     <string name="hello_blank_fragment_comment">Hello blank fragment for comments</string>
     <string name="title_post">Its a title</string>
     <string name="body_text">Its a body</string>
+    <string name="email_text">Its an email</string>
     <string name="comment_button">Comentarios</string>
 </resources>

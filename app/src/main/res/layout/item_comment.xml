@@ -3,7 +3,6 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto">
-
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/card"
         app:strokeColor="@color/card_border"
@@ -28,18 +27,26 @@
 
                 <!-- Title, secondary and supporting text -->
                 <TextView
-                    android:id="@+id/txt_title"
+                    android:id="@+id/txt_com_name"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/title_post"
                     android:textAppearance="?attr/textAppearanceHeadline6"
                     />
                 <TextView
-                    android:id="@+id/txt_body"
+                    android:id="@+id/txt_com_email"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
+                    android:textStyle="italic"
+                    android:text="@string/email_text"
+                    />
+                <TextView
+                    android:id="@+id/txt_com_body"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:text="@string/body_text"
+                    android:layout_marginTop="4dp"
                     android:textAppearance="?attr/textAppearanceBody2"
                     android:textColor="?android:attr/textColorSecondary"
                     />
@@ -47,23 +54,9 @@
             </LinearLayout>
 
             <!-- Buttons -->
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="8dp"
-                android:orientation="horizontal">
 
-                <com.google.android.material.button.MaterialButton
-                    android:id="@+id/btn_comments"
-                    style="?attr/borderlessButtonStyle"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="8dp"
-                    android:text="@string/comment_button" />
-            </LinearLayout>
 
         </LinearLayout>
 
     </com.google.android.material.card.MaterialCardView>
-
 </LinearLayout>

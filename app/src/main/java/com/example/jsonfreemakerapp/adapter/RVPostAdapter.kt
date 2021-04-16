@@ -8,9 +8,11 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.jsonfreemakerapp.R
 import com.example.jsonfreemakerapp.model.PostResponse
+import com.google.android.material.button.MaterialButton
 
 class RVPostAdapter (
-    private val postResponse: List<PostResponse>
+    private val postResponse: List<PostResponse>,
+    private val listener: (PostResponse) -> Unit
 ) :  RecyclerView.Adapter<RVPostAdapter.PostViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PostViewHolder {
@@ -23,6 +25,7 @@ class RVPostAdapter (
     override fun onBindViewHolder(holder: PostViewHolder, position: Int) {
         val post = postResponse[position]
         holder.bind(post)
+        holder.itemView.findViewById<MaterialButton>(R.id.btn_comments).setOnClickListener{ listener(post) }
     }
 
     class PostViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
@@ -32,12 +35,6 @@ class RVPostAdapter (
             val txtBody = itemView.findViewById<TextView>(R.id.txt_body)
             txtTitle.text = post.title
             txtBody.text = post.body
-
-            val button = itemView.findViewById<Button>(R.id.btn_comments)
-            button.setOnClickListener {
-
-            }
-
         }
 
     }

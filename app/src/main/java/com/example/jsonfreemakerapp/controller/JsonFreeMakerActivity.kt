@@ -47,6 +47,13 @@ class JsonFreeMakerActivity : AppCompatActivity() {
         }
     }
 
+    override fun onStart() {
+        super.onStart()
+        toolbar.title =  "Post"
+        val postFragment = PostFragment.newInstance()
+        openFragment(postFragment)
+    }
+
     private fun openFragment(fragment: Fragment) {
         val transaction = supportFragmentManager.beginTransaction()
         transaction.replace(R.id.container, fragment)
