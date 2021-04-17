@@ -23,7 +23,7 @@ class JsonFreeMakerActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         val bottomNavigation: BottomNavigationView = binding.bottomNavigation
-        bottomNavigation.selectedItemId = R.id.page_1
+        bottomNavigation.selectedItemId = R.id.page_2
 
         bottomNavigation.setOnNavigationItemSelectedListener(onNavigationItemSelectedListener)
 
@@ -38,9 +38,9 @@ class JsonFreeMakerActivity : AppCompatActivity() {
                 return@OnNavigationItemSelectedListener true
             }
             R.id.page_2 -> {
-                toolbar.title = "Comments"
-                val commentFragment = CommentFragment.newInstance()
-                openFragment(commentFragment)
+                toolbar.title = "Photos"
+                val photosFragment = PhotosFragment.newInstance()
+                openFragment(photosFragment)
                 return@OnNavigationItemSelectedListener true
             }
             else -> false
@@ -50,8 +50,8 @@ class JsonFreeMakerActivity : AppCompatActivity() {
     override fun onStart() {
         super.onStart()
         toolbar.title =  "Post"
-        val postFragment = PostFragment.newInstance()
-        openFragment(postFragment)
+        val photosFragment = PhotosFragment.newInstance()
+        openFragment(photosFragment)
     }
 
     private fun openFragment(fragment: Fragment) {

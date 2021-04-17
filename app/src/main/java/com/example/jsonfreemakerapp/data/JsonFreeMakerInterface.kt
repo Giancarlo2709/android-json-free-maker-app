@@ -1,6 +1,7 @@
 package com.example.jsonfreemakerapp.data
 
 import com.example.jsonfreemakerapp.model.CommentResponse
+import com.example.jsonfreemakerapp.model.PhotoResponse
 import com.example.jsonfreemakerapp.model.PostResponse
 import retrofit2.Call
 import retrofit2.http.GET
@@ -13,4 +14,7 @@ interface JsonFreeMakerInterface {
 
     @GET("/posts/{id}/comments")
     fun getCommentsById(@Path("id") id: Int) : Call<List<CommentResponse>>
+
+    @GET("/photos")
+    fun getPhotos() : Call<List<PhotoResponse>>
 }
