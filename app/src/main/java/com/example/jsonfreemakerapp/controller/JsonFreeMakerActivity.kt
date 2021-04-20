@@ -49,7 +49,7 @@ class JsonFreeMakerActivity : AppCompatActivity() {
 
     override fun onStart() {
         super.onStart()
-        toolbar.title =  "Post"
+        toolbar.title =  "Photos"
         val photosFragment = PhotosFragment.newInstance()
         openFragment(photosFragment)
     }
